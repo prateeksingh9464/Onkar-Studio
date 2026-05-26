@@ -1328,6 +1328,10 @@ footer {
 }
 
 @media (max-width: 992px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
   .section {
     padding: 6rem 0;
   }
@@ -1340,6 +1344,23 @@ footer {
   .about-img {
     max-width: 500px;
     margin: 0 auto;
+  }
+
+  .about-img::after {
+    display: none;
+  }
+
+  .about-info h3 {
+    font-size: 1.8rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+
+  .stat-item h4 {
+    font-size: 2rem;
   }
   
   .portfolio-grid {
@@ -1400,9 +1421,22 @@ footer {
   .modal-next {
     right: 1rem;
   }
+
+  .bg-glow {
+    width: 300px !important;
+    height: 300px !important;
+  }
 }
 
 @media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding: 0 1.2rem;
+  }
+
   nav {
     position: fixed;
     top: 0;
@@ -1441,30 +1475,198 @@ footer {
   .nav-toggle.active span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-  
-  .hero-title {
-    font-size: 2.8rem;
+
+  /* --- Hero Section --- */
+  .hero {
+    padding: 90px 0 30px;
   }
-  
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-desc {
+    font-size: 0.95rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .hero-image-frame {
+    max-width: 300px;
+  }
+
+  .hero-image-frame::after {
+    display: none;
+  }
+
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+  }
+
+  /* --- Section Spacing --- */
+  .section {
+    padding: 4rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  /* --- About Section (fixes text overflow) --- */
+  .about-grid {
+    gap: 2.5rem;
+  }
+
+  .about-img {
+    padding: 0.8rem;
+    max-width: 100%;
+  }
+
+  .about-img::after {
+    display: none;
+  }
+
+  .about-info h3 {
+    font-size: 1.5rem;
+    line-height: 1.35;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .about-info p {
+    font-size: 0.92rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* --- Stats Grid (fixes "Legacy" & "Happy Customers" visibility) --- */
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .stat-item {
+    padding: 1.2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-item h4 {
+    font-size: 2rem;
+  }
+
+  .stat-item p {
+    font-size: 0.8rem;
+  }
+
+  /* --- Portfolio --- */
   .portfolio-grid {
     column-count: 1;
   }
-  
-  .review-card {
-    padding: 2rem 1.5rem;
-  }
-  
-  .sticky-actions {
-    bottom: 1.5rem;
-    right: 1.5rem;
-  }
-  
-  .action-btn {
-    width: 48px;
-    height: 48px;
-    font-size: 1.2rem;
+
+  .portfolio-filters {
+    gap: 0.6rem;
+    margin-bottom: 2.5rem;
   }
 
+  .filter-btn {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+    letter-spacing: 0.1em;
+  }
+
+  /* --- Reviews --- */
+  .review-card {
+    padding: 2rem 1.2rem;
+  }
+
+  .review-text {
+    font-size: 1rem;
+  }
+
+  .carousel-controls {
+    margin-top: 2rem;
+    gap: 1.5rem;
+  }
+
+  .carousel-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  /* --- Contact Section --- */
+  .contact-form {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .info-card {
+    gap: 1rem;
+  }
+
+  .info-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 0.9rem;
+  }
+
+  .info-details h4 {
+    font-size: 0.95rem;
+  }
+
+  .info-details p, .info-details a {
+    font-size: 0.85rem;
+  }
+
+  .hours-table td {
+    font-size: 0.82rem;
+    padding: 0.6rem 0;
+  }
+
+  .map-container {
+    height: 220px;
+  }
+
+  /* --- Footer --- */
+  footer {
+    padding: 3rem 0 2rem;
+  }
+
+  .footer-grid {
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-brand p {
+    font-size: 0.85rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding-top: 1.5rem;
+  }
+
+  /* --- Sticky Actions --- */
+  .sticky-actions {
+    bottom: 1.2rem;
+    right: 1.2rem;
+    gap: 0.7rem;
+  }
+
+  .action-btn {
+    width: 46px;
+    height: 46px;
+    font-size: 1.15rem;
+  }
+
+  /* --- Modal / Lightbox --- */
   .modal-content {
     max-width: 95%;
   }
@@ -1473,6 +1675,111 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
+  }
+
+  .modal-close {
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+  }
+
+  .modal-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .modal-prev {
+    left: 0.5rem;
+  }
+
+  .modal-next {
+    right: 0.5rem;
+  }
+
+  /* --- Marquee Banner --- */
+  .marquee-banner {
+    padding: 1rem 0;
+  }
+
+  .marquee-track span {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+  }
+
+  /* --- Background Glows (prevent horizontal overflow) --- */
+  .bg-glow {
+    width: 250px !important;
+    height: 250px !important;
+  }
+}
+
+/* --- Extra Small Devices (phones under 480px) --- */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.7rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.8rem;
+  }
+
+  .hero-desc {
+    font-size: 0.88rem;
+  }
+
+  .hero-image-frame {
+    max-width: 260px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .about-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-info p {
+    font-size: 0.86rem;
+  }
+
+  .stat-item h4 {
+    font-size: 1.8rem;
+  }
+
+  .review-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .review-text {
+    font-size: 0.92rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem 1rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .btn {
+    padding: 0.9rem 1.6rem;
+    font-size: 0.75rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  header .container {
+    height: 60px;
   }
 }
 
